@@ -18,15 +18,18 @@
 	$stats_content = elgg_view('publicdashboard/site_stats');
 	
 	// Public Tags content
-	$tags_header = elgg_view_title(elgg_echo('publicdashboard:tagcloud'));
-	$context = get_context();
 	set_context('tags');
 	$tags_content = elgg_view_tagcloud(array(
 											'threshold' => get_plugin_setting('tagthreshold', 'publicdashboard'), 
 											'limit' => get_plugin_setting('taglimit', 'publicdashboard')
 											));
 	set_context($context);
-
+	
+	if ($tags_content) {
+		$tags_header = elgg_view_title(elgg_echo('publicdashboard:tagcloud'));
+		$context = get_context();
+	}
+	
 	echo "<div class='publicdashboard'>
 			<div class='sidebar'>
 				$intro_header 
