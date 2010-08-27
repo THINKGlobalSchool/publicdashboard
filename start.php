@@ -18,6 +18,10 @@
 		
 		// Extend Default page shell 
 		elgg_extend_view('page_shells/default', 'page_shells/publicdashboard', 10);
+
+		
+		global $CONFIG;
+
 	}
 
 	function publicdashboard_index() {
