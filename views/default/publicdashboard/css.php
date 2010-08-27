@@ -25,7 +25,6 @@
 	padding-top: 7px;
 	font-size: 110%;
 	color: #444444;
-	font-weight: bold;
 	margin-bottom: 15px;
 }
 
