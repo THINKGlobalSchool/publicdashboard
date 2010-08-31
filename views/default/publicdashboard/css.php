@@ -69,6 +69,12 @@
 	visibility: hidden; 
 	margin-left: auto;
 	margin-right: auto;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+	-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 /* GALLERY CONTAINER */
