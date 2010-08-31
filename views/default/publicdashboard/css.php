@@ -62,3 +62,77 @@
 	padding-top: 7px;
 	margin-bottom: 15px;
 }
+
+/* GALLERY LIST */
+/* IMPORTANT - Change '#photos' to the ID of your gallery list to prevent a flash of unstyled content */
+#photo_list { 
+	visibility: hidden; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* GALLERY CONTAINER */
+.gallery { background: #000; border: 1px solid #aaa; padding: 5px;}
+
+/* LOADING BOX */
+.loader { background: url(loader.gif) center center no-repeat #ddd; }
+
+/* GALLERY PANELS */
+.panel {
+	background: #000;
+}
+
+/* DEFINE HEIGHT OF PANEL OVERLAY */
+/* NOTE - It is best to define padding here as well so overlay and background retain identical dimensions */
+.panel .panel-overlay,
+.panel .overlay-background { height: 60px; padding: 0 1em; }
+
+/* PANEL OVERLAY BACKGROUND */
+.panel .overlay-background { background: #111; }
+
+/* PANEL OVERLAY CONTENT */
+.panel .panel-overlay { color: white; font-size: 0.9em; }
+.panel .panel-overlay a { color: white; text-decoration: underline; font-weight: bold; }
+.panel .panel-overlay h3 { color: white; font-size: 14px; }
+
+
+.photo_subtext { font-style: italic; }
+
+/* FILMSTRIP */
+/* 'margin' will define top/bottom margin in completed gallery */
+.filmstrip { margin: 5px; }
+
+/* FILMSTRIP FRAMES (contains both images and captions) */
+.frame {}
+
+/* WRAPPER FOR FILMSTRIP IMAGES */
+.frame .img_wrap { border: 1px solid #aaa; }
+
+/* WRAPPER FOR CURRENT FILMSTRIP IMAGE */
+.frame.current .img_wrap { border-color: #000; }
+
+/* FRAME IMAGES */
+.frame img { border: none; }
+
+/* FRAME CAPTION */
+.frame .caption { font-size: 11px; text-align: center; color: #888; }
+
+/* CURRENT FRAME CAPTION */
+.frame.current .caption { color: #000; }
+
+/* POINTER FOR CURRENT FRAME */
+.pointer {
+	border-color: #ddd;
+}
+
+/* TRANSPARENT BORDER FIX FOR IE6 */
+/* NOTE - DO NOT CHANGE THIS RULE */
+*html .pointer {
+	filter: chroma(color=pink);
+}
+
+.panel-content img {
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}

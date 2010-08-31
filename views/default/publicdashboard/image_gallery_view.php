@@ -16,11 +16,14 @@
 	if ($vars['photos']) {
 		$content = "<ul id='{$vars['id']}'>";
 		foreach($vars['photos'] as $photo) {
+			$owner = get_entity($photo->owner_guid);
+			$created = date("F j, Y g:i a", $photo->time_created);
 			$content .= "
 						<li>
-							<img  src=\"{$vars['url']}pg/photos/thumbnail/{$photo->getGUID()}/large/\" alt=\"{$photo->title}\" />
+							<img alt='{$photo->getURL()}' src=\"{$vars['url']}pg/photos/thumbnail/{$photo->getGUID()}/large/\" alt=\"{$photo->title}\" /><
 							<div class='panel-overlay'>
 											<h3>{$photo->title}</h3>
+											<span class='photo_subtext'>{$owner->name} - $created</span>
 											<p>{$photo->description}</p>
 							</div>
 						</li>
