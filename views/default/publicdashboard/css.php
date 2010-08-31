@@ -85,7 +85,7 @@
 /* DEFINE HEIGHT OF PANEL OVERLAY */
 /* NOTE - It is best to define padding here as well so overlay and background retain identical dimensions */
 .panel .panel-overlay,
-.panel .overlay-background { height: 60px; padding: 0 1em; }
+.panel .overlay-background { height: 78px; padding: 0 2em; }
 
 /* PANEL OVERLAY BACKGROUND */
 .panel .overlay-background { background: #111; }

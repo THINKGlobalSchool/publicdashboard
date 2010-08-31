@@ -18,13 +18,14 @@
 		foreach($vars['photos'] as $photo) {
 			$owner = get_entity($photo->owner_guid);
 			$created = date("F j, Y g:i a", $photo->time_created);
+			$desc = elgg_get_excerpt($photo->description, 140);
 			$content .= "
 						<li>
 							<img alt='{$photo->getURL()}' src=\"{$vars['url']}pg/photos/thumbnail/{$photo->getGUID()}/large/\" alt=\"{$photo->title}\" /><
 							<div class='panel-overlay'>
 											<h3>{$photo->title}</h3>
 											<span class='photo_subtext'>{$owner->name} - $created</span>
-											<p>{$photo->description}</p>
+											<p>$desc</p>
 							</div>
 						</li>
 			";
