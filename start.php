@@ -15,6 +15,7 @@
 		
 		// Extend CSS
 		elgg_extend_view('css','publicdashboard/css');
+		elgg_extend_view('css','publicdashboard/galleriffic');
 		
 		// Extend Default page shell 
 		elgg_extend_view('page_shells/default', 'page_shells/publicdashboard', 10);

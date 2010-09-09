@@ -17,27 +17,72 @@
 	
 	echo "<div class='publicdashboard'>
 			<div class='latest_container'>
-				$header <br /> $photos_content <br />
+				$header <br /> 
+				<div id='pdss'>
+					$photos_content
+				</div> 
+				<br />
 			</div>
 		</div>
 		";
 ?>
 <script type='text/javascript'>
-	$(document).ready(
-		function() {
-			$('#photo_list').galleryView({
-					gallery_width: 1000,
-					gallery_height: 500,
-					frame_width: 100,
-					frame_height: 80,
-					pause_on_hover: true,
-					nav_theme: 'light',
-					transition_speed: 1000,
-					transition_interval: 9000,
-				})
-		}
-	);
+	jQuery(document).ready(function($) {
+		
+		
+		// We only want these styles applied when javascript is enabled
+		$('div.nav_galleriffic').css({'width' : '100px', 'float' : 'right', 'height' : '590px', 'overflow' : 'hidden'});
+		$('div.content').css('display', 'block');
+
+		// Initially set opacity on thumbs and add
+		// additional styling for hover effect on thumbs
+		var onMouseOutOpacity = 0.67;
+		$('#thumbs ul.thumbs li').opacityrollover({
+			mouseOutOpacity:   onMouseOutOpacity,
+			mouseOverOpacity:  1.0,
+			fadeSpeed:         'fast',
+			exemptionSelector: '.selected'
+		});
+		
+		// Initialize Advanced Galleriffic Gallery
+		var gallery = $('#thumbs').galleriffic({
+			showPagesPagination:	   false, // This will hide the page buttons
+			delay:                     5000,
+			numThumbs:                 6,
+			preloadAhead:              10,
+			enableTopPager:            true,
+			enableBottomPager:         false,
+			maxPagesToShow:            7,
+			imageContainerSel:         '#slideshow',
+			controlsContainerSel:      '#controls',
+			captionContainerSel:       '#caption',
+			loadingContainerSel:       '#loading',
+			renderSSControls:          true,
+			renderNavControls:         true,
+			playLinkText:              'Play Slideshow',
+			pauseLinkText:             'Pause Slideshow',
+			prevLinkText:              '&lsaquo; Previous Photo',
+			nextLinkText:              'Next Photo &rsaquo;',
+			nextPageLinkText:          '&rsaquo;&rsaquo;&rsaquo;',
+			prevPageLinkText:          '&lsaquo;&lsaquo;&lsaquo;',
+			enableHistory:             false,
+			autoStart:                 true,
+			syncTransitions:           true,
+			defaultTransitionDuration: 900,
+			onSlideChange:             function(prevIndex, nextIndex) {
+				// 'this' refers to the gallery, which is an extension of $('#thumbs')
+				this.find('ul.thumbs').children()
+					.eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+					.eq(nextIndex).fadeTo('fast', 1.0);
+			},
+			onPageTransitionOut:       function(callback) {
+				this.fadeTo('fast', 0.0, callback);
+			},
+			onPageTransitionIn:        function() {
+				this.fadeTo('fast', 1.0);
+			}
+		});
+	});
 </script>
-<script type='text/javascript' src="<?php echo $vars['url'] . "mod/publicdashboard/scripts/galleryview/jquery.timers-1.2.js" ?>"></script>
-<script type='text/javascript' src="<?php echo $vars['url'] . "mod/publicdashboard/scripts/galleryview/jquery.easing.1.3.js" ?>"></script>
-<script type='text/javascript' src="<?php echo $vars['url'] . "mod/publicdashboard/scripts/galleryview/jquery.galleryview-2.1.1-pack.js" ?>"></script>
+<script type='text/javascript' src="<?php echo $vars['url'] . "mod/publicdashboard/js/jquery.galleriffic.js" ?>"></script>
+<script type='text/javascript' src="<?php echo $vars['url'] . "mod/publicdashboard/js/jquery.opacityrollover.js" ?>"></script>

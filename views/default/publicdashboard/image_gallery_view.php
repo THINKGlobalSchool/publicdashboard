@@ -12,25 +12,49 @@
 	 * @uses $vars['photos'] - photo entity
 	 * @uses $vars['id']  - UL id
 	 */
+?>
+<div id="container">
 
-	if ($vars['photos']) {
-		$content = "<ul id='{$vars['id']}'>";
-		foreach($vars['photos'] as $photo) {
-			$owner = get_entity($photo->owner_guid);
-			$created = date("F j, Y g:i a", $photo->time_created);
-			$desc = elgg_get_excerpt($photo->description, 140);
-			$content .= "
+	<!-- Start Advanced Gallery Html Containers -->
+	<div id="gallery" class="content">
+		<div id="controls" class="controls"></div>
+		<div class="slideshow-container">
+			<div id="loading" class="loader"></div>
+			<div id="slideshow" class="slideshow"></div>
+		</div>
+		<div id="caption" class="caption-container"></div>
+	</div>
+	<div id="thumbs" class="nav_galleriffic">
+		<ul class="thumbs noscript">
+		<?php
+			if ($vars['photos']) {
+				foreach($vars['photos'] as $photo) {
+					$owner = get_entity($photo->owner_guid);
+					$created = date("F j, Y g:i a", $photo->time_created);
+					$desc = elgg_get_excerpt($photo->description, 140);
+					$content .= "
 						<li>
-							<img alt='{$photo->getURL()}' src=\"{$vars['url']}pg/photos/thumbnail/{$photo->getGUID()}/large/\" alt=\"{$photo->title}\" /><
-							<div class='panel-overlay'>
-											<h3>{$photo->title}</h3>
-											<span class='photo_subtext'>{$owner->name} - $created</span>
-											<p>$desc</p>
+							<div style='width: 75px;height: 75px; overflow: hidden;'>
+							<a class='thumb' name='{$photo->getGUID()}' href='{$vars['url']}pg/photos/download/{$photo->getGUID()}/inline/' title='{$photo->title}'>
+								<img style='width: 70px;'src='{$vars['url']}pg/photos/download/{$photo->getGUID()}/inline/' alt='{$photo->title}' />
+							</a>
+							</div>
+							<div class='caption'>
+								<div class='download'>
+									<a href='{$photo->getURL()}'>View Original</a>
+								</div>
+								<div class='image-title'>{$photo->title} </div>
+								<div class='entity_metadata'>By: <strong>{$owner->name}</strong> on $created</div>
 							</div>
 						</li>
-			";
-		}
-		$content .= '</ul>';
-		echo $content;
-	}
-?>
+					";
+				}
+				echo $content;
+			}
+		?>
+		</ul>
+	</div>
+	<div style="clear: both;"></div>
+</div>
+
+
