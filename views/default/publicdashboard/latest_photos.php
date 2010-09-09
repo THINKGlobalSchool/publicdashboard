@@ -11,7 +11,7 @@
 	
 	$header = elgg_view_title(elgg_echo('publicdashboard:latestphotos'));
 	
-	$photos = elgg_get_entities(array('type' => 'object', 'subtype' => 'image'));
+	$photos = elgg_get_entities(array('type' => 'object', 'subtype' => 'image', 'limit' => 75));
 	$photos_content = elgg_view('publicdashboard/image_gallery_view', array('id' => 'photo_list', 'photos' => $photos));
 	
 	
@@ -31,7 +31,7 @@
 		
 		
 		// We only want these styles applied when javascript is enabled
-		$('div.nav_galleriffic').css({'width' : '100px', 'float' : 'right', 'height' : '590px', 'overflow' : 'hidden'});
+		$('div.nav_galleriffic').css({'width' : '100px', 'float' : 'right', 'height' : '550px', 'overflow' : 'hidden', 'margin-bottom' : '80px'});
 		$('div.content').css('display', 'block');
 
 		// Initially set opacity on thumbs and add
