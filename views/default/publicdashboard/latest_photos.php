@@ -47,7 +47,7 @@
 		// Initialize Advanced Galleriffic Gallery
 		var gallery = $('#thumbs').galleriffic({
 			showPagesPagination:	   false, // This will hide the page buttons
-			delay:                     5000,
+			delay:                     9000,
 			numThumbs:                 6,
 			preloadAhead:              10,
 			enableTopPager:            true,
