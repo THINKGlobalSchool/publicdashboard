@@ -30,16 +30,17 @@
 	$group_count = elgg_get_entities(array('type' => 'group', 'count' => true));
 	
 	$todo_label = elgg_echo('publicdashboard:stats:todo');
-	$todos = elgg_get_entities(array('type' => 'object', 'subtype' => 'todo')); // Get all To Do's.. will be counting complete
-	
-	elgg_set_ignore_access($ia);
+	$todos = elgg_get_entities(array('type' => 'object', 'subtype' => 'todo', 'limit' => 9999)); // Get all To Do's.. will be counting complete
 	
 	$todo_count = 0;
 	foreach ($todos as $todo) {
+	
 		if (have_assignees_completed_todo($todo->getGUID())) {
 			$todo_count++;
 		}
 	}  
+	
+	elgg_set_ignore_access($ia);
 	
 	echo "
 		<table id='stats_table'>
