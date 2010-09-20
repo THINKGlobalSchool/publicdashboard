@@ -17,8 +17,7 @@
 	$blog_count = elgg_get_entities(array('type' => 'object', 'subtype' => 'blog', 'count' => true));
 
 	$photo_label = elgg_echo('publicdashboard:stats:photo');
-	//$photo_count = elgg_get_entities(array('type' => 'object', 'subtype' => 'blog', 'count' => true));
-	$photo_count = 112;
+	$photo_count = elgg_get_entities(array('type' => 'object', 'subtype' => 'blog', 'count' => true));
 	
 	$bookmark_label = elgg_echo('publicdashboard:stats:bookmark');
 	$bookmark_count = elgg_get_entities(array('type' => 'object', 'subtype' => 'bookmarks', 'count' => true));
