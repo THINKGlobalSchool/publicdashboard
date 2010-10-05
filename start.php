@@ -19,6 +19,7 @@
 		
 		// Extend Default page shell 
 		elgg_extend_view('page_shells/default', 'page_shells/publicdashboard', 10);
+		elgg_extend_view('output/access', 'publicdashboard/access_override', 1);
 
 		
 		global $CONFIG;
@@ -30,7 +31,8 @@
 		if (isloggedin()) {
 				forward('pg/dashboard/');
 		}
-		set_context('main');
+		
+		set_context('publicdashboard');
 
 		$main = elgg_view('publicdashboard/latest_blogs');
 		$main .= elgg_view('publicdashboard/latest_photos');
