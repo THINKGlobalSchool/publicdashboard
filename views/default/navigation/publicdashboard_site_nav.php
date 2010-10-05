@@ -15,8 +15,6 @@
 	$home->value->url = $CONFIG->url;
 	$home->value->context = 'publicdashboard';
 	
-	echo get_context();
-	
 	$blog->name = 'Blogs';
 	$blog->value->url = $CONFIG->url . 'pg/blog';
 	$blog->value->context = 'blog';
