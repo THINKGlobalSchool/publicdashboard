@@ -28,16 +28,9 @@
 	$group_label = elgg_echo('publicdashboard:stats:group');
 	$group_count = elgg_get_entities(array('type' => 'group', 'count' => true));
 	
+	// This actually counts submissions instead of todos
 	$todo_label = elgg_echo('publicdashboard:stats:todo');
-	$todos = elgg_get_entities(array('type' => 'object', 'subtype' => 'todo', 'limit' => 9999)); // Get all To Do's.. will be counting complete
-	
-	$todo_count = 0;
-	foreach ($todos as $todo) {
-	
-		if (have_assignees_completed_todo($todo->getGUID())) {
-			$todo_count++;
-		}
-	}  
+	$todo_count = elgg_get_entities(array('type' => 'object', 'subtype' => 'todosubmission', 'count' => true)); 
 	
 	elgg_set_ignore_access($ia);
 	
