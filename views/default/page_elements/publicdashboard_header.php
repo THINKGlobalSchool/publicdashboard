@@ -14,10 +14,10 @@
 	<div id="elgg_header_contents">
 		<?php
 			// link back to main site.
-			echo elgg_view('page_elements/elgg_header_logo', $vars);
+			echo elgg_view('page_elements/header_logo', $vars);
 			
 			// drop-down login
-			echo elgg_view('account/forms/login_dropdown');
+			echo elgg_view('account/login_dropdown');
 		
 			// insert site-wide navigation
 			echo elgg_view('navigation/publicdashboard_site_nav');
