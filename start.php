@@ -18,7 +18,7 @@
 		elgg_extend_view('css','publicdashboard/galleriffic');
 		
 		// Extend Default page shell 
-		elgg_extend_view('page_shells/default', 'page_shells/publicdashboard', 10);
+		elgg_extend_view('default', 'publicdashboard', 10);
 		elgg_extend_view('output/access', 'publicdashboard/access_override', 1);
 
 		
@@ -41,7 +41,7 @@
 		$sidebar = elgg_view('publicdashboard/public_sidebar');
 
 		$content = elgg_view_layout('one_column_with_sidebar', $main, $sidebar);
-		page_draw(null, $content, 'page_shells/publicdashboard');
+		page_draw(null, $content, 'publicdashboard');
 		return true;
 	}
 
