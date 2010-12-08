@@ -41,7 +41,7 @@
 		$sidebar = elgg_view('publicdashboard/public_sidebar');
 
 		$content = elgg_view_layout('one_column_with_sidebar', $main, $sidebar);
-		page_draw(null, $content, 'publicdashboard');
+		echo elgg_view_page(null, $content, 'publicdashboard');
 		return true;
 	}
 
