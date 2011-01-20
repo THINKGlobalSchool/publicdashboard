@@ -10,11 +10,29 @@
 	 */
 ?>
 <p>
+    <label><?php echo elgg_echo('publicdashboard:introcontenttitletitle'); ?></label><br />
+    <?php 
+	echo elgg_view('input/text', array(
+										'internalname' => 'params[introcontenttitle]', 
+										'value' => $vars['entity']->introcontenttitle)
+										); 
+	?>
+</p>
+<p>
     <label><?php echo elgg_echo('publicdashboard:introcontenttitle'); ?></label><br />
     <?php 
 	echo elgg_view('input/plaintext', array(
 										'internalname' => 'params[introcontent]', 
 										'value' => $vars['entity']->introcontent)
+										); 
+	?>
+</p>
+<p>
+    <label><?php echo elgg_echo('publicdashboard:statstitle'); ?></label><br />
+    <?php 
+	echo elgg_view('input/text', array(
+										'internalname' => 'params[statstitle]', 
+										'value' => $vars['entity']->statstitle)
 										); 
 	?>
 </p>

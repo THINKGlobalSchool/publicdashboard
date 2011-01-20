@@ -11,7 +11,7 @@
 	
 	$header = elgg_view_title(elgg_echo('publicdashboard:latestblogs'));
 	
-	$blogs = elgg_list_entities(array('type' => 'object', 'subtype' =>' blog', 'limit' => 10, 'full_view' => false, 'pagination' => 'false'));
+	$blogs = elgg_list_entities(array('type' => 'object', 'subtype' =>' blog', 'limit' => 5, 'full_view' => false, 'pagination' => FALSE));
 	
 	echo "<div class='publicdashboard'>
 			<div class='latest_container'>

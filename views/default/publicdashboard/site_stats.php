@@ -19,6 +19,9 @@
 	$photo_label = elgg_echo('publicdashboard:stats:photo');
 	$photo_count = elgg_get_entities(array('type' => 'object', 'subtype' => 'image', 'count' => true));
 	
+	$videos_label = elgg_echo('publicdashboard:stats:spotvideos');
+	$videos_count = elgg_get_entities(array('type' => 'object', 'subtype' => 'simplekaltura_video', 'count' => true));
+	
 	$bookmark_label = elgg_echo('publicdashboard:stats:bookmark');
 	$bookmark_count = elgg_get_entities(array('type' => 'object', 'subtype' => 'bookmarks', 'count' => true));
 	
@@ -45,18 +48,22 @@
 				<td class='stat'>$photo_count</td>
 			</tr>
 			<tr class='odd'>
+				<td class='label'>$videos_label</td>
+				<td class='stat'>$videos_count</td>
+			</tr>
+			<tr class='even'>
 				<td class='label'>$bookmark_label</td>
 				<td class='stat'>$bookmark_count</td>
 			</tr>
-			<tr class='even'>
+			<tr class='odd'>
 				<td class='label'>$rubric_label</td>
 				<td class='stat'>$rubric_count</td>
 			</tr>
-			<tr class='odd'>
+			<tr class='even'>
 				<td class='label'>$group_label</td>
 				<td class='stat'>$group_count</td>
 			</tr>
-			<tr class='even'>
+			<tr class='odd'>
 				<td class='label'>$todo_label</td>
 				<td class='stat'>$todo_count</td>
 			</tr>

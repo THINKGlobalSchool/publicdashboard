@@ -14,9 +14,9 @@ $english = array(
 	'publicdashboard:latestblogs' => 'Latest Blog Posts',
 	'publicdashboard:latestphotos' => 'Latest Photos',
 	'publicdashboard:latestvideos' => 'Latest Videos',
-	'publicdashboard:introtitle' => 'What is Spot?',
 	'publicdashboard:tagcloud' => 'Tag Cloud',
-	'publicdashboard:spotstats' => 'Spot Stats', 
+	'publicdashboard:introcontenttitletitle' => 'Introduction Content Title',
+	'publicdashboard:statstitle' => 'Stats Listing Title',
 	'publicdashboard:introcontenttitle' => 'Introduction Content',
 	'publicdashboard:publictagthreshold' => 'Tag Cloud Threshold',
 	'publicdashboard:publictaglimit' => 'Tag Cloud Limit',
@@ -27,6 +27,7 @@ $english = array(
 	'publicdashboard:stats:rubric' => 'Rubrics',
 	'publicdashboard:stats:group' => 'Groups',
 	'publicdashboard:stats:todo' => 'Complete To Do\'s',
+	'publicdashboard:stats:spotvideos' => 'Spot Videos',
 	
 
 );

@@ -10,11 +10,11 @@
 	 */
 	
 	// Intro content
-	$intro_header = elgg_view_title(elgg_echo('publicdashboard:introtitle'));
+	$intro_header = elgg_view_title(get_plugin_setting('introcontenttitle', 'publicdashboard'));
 	$intro_content = get_plugin_setting('introcontent', 'publicdashboard');
 	
 	// Stats content
-	$stats_header = elgg_view_title(elgg_echo('publicdashboard:spotstats'));
+	$stats_header = elgg_view_title(get_plugin_setting('statstitle', 'publicdashboard'));
 	$stats_content = elgg_view('publicdashboard/site_stats');
 	
 	// Public Tags content
