@@ -9,5 +9,18 @@
 	 * @link http://www.thinkglobalschool.com/
 	 */
 	
-	//$header = elgg_view_title(elgg_echo('publicdashboard:latestvideos'));
+	// Register Popup JS
+	elgg_register_js(elgg_get_site_url() . 'mod/simplekaltura/lib/listing-popup.js', 'video-listing-popup');
+	
+	$header = elgg_view_title(elgg_echo('publicdashboard:latestvideos'));
+
+	$videos = elgg_list_entities(array('type' => 'object', 'subtype' => 'simplekaltura_video', 'limit' => 5, 'full_view' => false, 'pagination' => FALSE));
+	
+	echo "<div class='publicdashboard'>
+			<div class='latest_container'>
+				$header $videos
+			</div>
+		</div>";
+		
 ?>
+
