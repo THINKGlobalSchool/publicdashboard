@@ -12,11 +12,11 @@
 	$header = elgg_view_title(elgg_echo('publicdashboard:latestphotos'));
 	
 	$photos = elgg_get_entities(array('type' => 'object', 'subtype' => 'image', 'limit' => 30));
-	$photos_content = elgg_view('publicdashboard/image_gallery_view', array('id' => 'photo_list', 'photos' => $photos));
+	$photos_content = elgg_view('publicdashboard/image_gallery_view', array('id' => 'photo-list', 'photos' => $photos));
 	
 	
 	echo "<div class='publicdashboard'>
-			<div class='latest_container'>
+			<div class='latest-container'>
 				$header <br /> 
 				<div id='pdss'>
 					$photos_content

@@ -13,7 +13,7 @@
 .publicdashboard {
 }
 
-.publicdashboard .latest_container {
+.publicdashboard .latest-container {
 	margin-bottom: 15px;
 }
 
@@ -32,28 +32,28 @@
 	margin-bottom: 15px;
 }
 
-.publicdashboard .sidebar .spotstats table#stats_table td {
+.publicdashboard .sidebar .spotstats table#stats-table td {
 	font-weight: bold;
 	font-size: 110%;
 	color: #555555;
 	padding: 4px;
 }
 
-.publicdashboard .sidebar .spotstats table#stats_table td.label {
+.publicdashboard .sidebar .spotstats table#stats-table td.label {
 	width: 70%;
 	text-shadow: 1px 1px 1px #AAAAAA;
 }
 
-.publicdashboard .sidebar .spotstats table#stats_table td.stat {
+.publicdashboard .sidebar .spotstats table#stats-table td.stat {
 	color: #800518;
 	width: 30%;
 }
 
-.publicdashboard .sidebar .spotstats table#stats_table tr.odd {
+.publicdashboard .sidebar .spotstats table#stats-table tr.odd {
 	background: #EEEEEE;
 	border-bottom: 1px solid #CCCCCC;
 }
-.publicdashboard .sidebar .spotstats table#stats_table tr.even {
+.publicdashboard .sidebar .spotstats table#stats-table tr.even {
 	background: #DDDDDD;
 	border-bottom: 1px solid #CCCCCC;
 }
@@ -65,7 +65,7 @@
 
 /* GALLERY LIST */
 /* IMPORTANT - Change '#photos' to the ID of your gallery list to prevent a flash of unstyled content */
-#photo_list { 
+#photo-list { 
 	visibility: hidden; 
 	margin-left: auto;
 	margin-right: auto;
@@ -102,7 +102,7 @@
 .panel .panel-overlay h3 { color: white; font-size: 14px; }
 
 
-.photo_subtext { font-style: italic; }
+.photo-subtext { font-style: italic; }
 
 /* FILMSTRIP */
 /* 'margin' will define top/bottom margin in completed gallery */

@@ -17,7 +17,7 @@
 	$videos = elgg_list_entities(array('type' => 'object', 'subtype' => 'simplekaltura_video', 'limit' => 5, 'full_view' => false, 'pagination' => FALSE));
 	
 	echo "<div class='publicdashboard'>
-			<div class='latest_container'>
+			<div class='latest-container'>
 				$header $videos
 			</div>
 		</div>";

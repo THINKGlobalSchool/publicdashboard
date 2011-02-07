@@ -38,7 +38,7 @@
 	elgg_set_ignore_access($ia);
 	
 	echo "
-		<table id='stats_table'>
+		<table id='stats-table'>
 			<tr class='odd'>
 				<td class='label'>$blog_label</td>
 				<td class='stat'>$blog_count</td>
