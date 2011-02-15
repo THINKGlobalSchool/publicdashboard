@@ -32,11 +32,12 @@
 					$owner = get_entity($photo->owner_guid);
 					$created = date("F j, Y g:i a", $photo->time_created);
 					$desc = elgg_get_excerpt($photo->description, 140);
+					$src = elgg_get_site_url() . "pg/photos/thumbnail/{$photo->getGUID()}";
 					$content .= "
 						<li>
 							<div style='width: 75px;height: 75px; overflow: hidden;'>
-							<a class='thumb' name='{$photo->getGUID()}' href='{$vars['url']}pg/photos/download/{$photo->getGUID()}/inline/' title='{$photo->title}'>
-								<img style='width: 70px;'src='{$vars['url']}pg/photos/download/{$photo->getGUID()}/inline/' alt='{$photo->title}' />
+							<a class='thumb' name='{$photo->getGUID()}' href='$src/large' title='{$photo->title}'>
+								<img style='width: 70px;'src='$src/small' alt='{$photo->title}' />
 							</a>
 							</div>
 							<div class='caption'>
