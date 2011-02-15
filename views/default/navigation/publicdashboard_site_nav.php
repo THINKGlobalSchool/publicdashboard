@@ -23,12 +23,15 @@
 	$photos->value->url = $CONFIG->url . 'pg/photos/world';
 	$photos->value->context = 'tidypics';
 	
-	// Not implemented... yet..
+	$photos->name = 'Photos';
+	$photos->value->url = $CONFIG->url . 'pg/photos/world';
+	$photos->value->context = 'tidypics';
+	
 	$videos->name = 'Videos';
-	$videos->value->url = $CONFIG->url . '';
-	$videos->value->context = 'Videos';
-
-	$parent_nav = array($home, $blog, $photos);
+	$videos->value->url = $CONFIG->url . 'pg/videos';
+	$videos->value->context = 'simplekaltura';
+	
+	$parent_nav = array($home, $blog, $photos, $videos);
 
 	$nav_html = '';
 	$context = get_context();
