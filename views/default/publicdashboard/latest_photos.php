@@ -1,30 +1,34 @@
 <?php
-	/**
-	 * Public Dashboard Latest Photos View
-	 * 
-	 * @package Public Dashboard
-	 * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
-	 * @author Jeff Tilson
-	 * @copyright THINK Global School 2010
-	 * @link http://www.thinkglobalschool.com/				"object", "image"
-	 */
-	
-	$header = elgg_view_title(elgg_echo('publicdashboard:latestphotos'));
-	
-	$photos = elgg_get_entities(array('type' => 'object', 'subtype' => 'image', 'limit' => 30));
-	$photos_content = elgg_view('publicdashboard/image_gallery_view', array('id' => 'photo-list', 'photos' => $photos));
-	
-	
-	echo "<div class='publicdashboard'>
-			<div class='latest-container'>
-				$header <br /> 
-				<div id='pdss'>
-					$photos_content
-				</div> 
-				<br />
-			</div>
+/**
+ * Public Dashboard Latest Photos View
+ * 
+ * @package Public Dashboard
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
+ * @author Jeff Tilson
+ * @copyright THINK Global School 2010
+ * @link http://www.thinkglobalschool.com/
+ */
+
+$header = elgg_view_title(elgg_echo('publicdashboard:latestphotos'));
+
+$photos = elgg_get_entities(array('type' => 'object', 'subtype' => 'image', 'limit' => 30));
+$photos_content = elgg_view('publicdashboard/image_gallery_view', array('id' => 'photo-list', 'photos' => $photos));
+
+
+$content = <<<HTML
+	<div class='publicdashboard'>
+		<div class='latest-container'>
+			$header <br /> 
+			<div id='pdss'>
+				$photos_content
+			</div> 
+			<br />
 		</div>
-		";
+	</div>
+HTML;
+
+echo $content;
+
 ?>
 <script type='text/javascript'>
 	jQuery(document).ready(function($) {

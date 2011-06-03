@@ -1,20 +1,19 @@
 <?php
-	/**
-	 * Public Dashboard Image Gallery View - Formats photos and their data in such a way that the 
-	 * galleryview jQuery plugin can display 
-	 * 
-	 * @package Public Dashboard
-	 * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
-	 * @author Jeff Tilson
-	 * @copyright THINK Global School 2010
-	 * @link http://www.thinkglobalschool.com/
-	 * 
-	 * @uses $vars['photos'] - photo entity
-	 * @uses $vars['id']  - UL id
-	 */
+/**
+ * Public Dashboard Image Gallery View - Formats photos and their data in such a way that the 
+ * galleryview jQuery plugin can display 
+ * 
+ * @package Public Dashboard
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
+ * @author Jeff Tilson
+ * @copyright THINK Global School 2010
+ * @link http://www.thinkglobalschool.com/
+ * 
+ * @uses $vars['photos'] - photo entity
+ * @uses $vars['id']  - UL id
+ */
 ?>
 <div id="container">
-
 	<!-- Start Advanced Gallery Html Containers -->
 	<div id="gallery" class="content">
 		<div id="controls" class="controls"></div>
