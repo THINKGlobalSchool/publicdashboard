@@ -9,17 +9,8 @@
  * @link http://www.thinkglobalschool.com/
  */
 
-$header = elgg_view_title(elgg_echo('publicdashboard:latestblogs'));
+$header = elgg_echo('publicdashboard:latestblogs');
 
 $blogs = elgg_list_entities(array('type' => 'object', 'subtype' =>' blog', 'limit' => 5, 'full_view' => false, 'pagination' => FALSE));
 
-$content = <<<HTML
-	<div class='publicdashboard'>
-		<div class='latest-container'>
-			$header $blogs
-		</div>
-	</div>
-HTML;
-
-echo $content;
-?>
+echo elgg_view_module('main', $header, $blogs);

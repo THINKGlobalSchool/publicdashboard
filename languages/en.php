@@ -21,6 +21,13 @@ $english = array(
 	'publicdashboard:publictagthreshold' => 'Tag Cloud Threshold',
 	'publicdashboard:publictaglimit' => 'Tag Cloud Limit',
 	
+	// Site menu
+	'publicdashboard:menu:spothome' => 'Spot Home',
+	'publicdashboard:menu:blogs' => 'Blogs',
+	'publicdashboard:menu:photos' => 'Photos',
+	'publicdashboard:menu:videos' => 'Videos',
+	
+	// Stats
 	'publicdashboard:stats:blog' => 'Blog Posts',
 	'publicdashboard:stats:photo' => 'Photos',
 	'publicdashboard:stats:bookmark' => 'Bookmarks',

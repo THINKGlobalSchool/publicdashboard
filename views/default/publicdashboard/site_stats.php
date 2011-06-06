@@ -38,35 +38,37 @@ $todo_count = elgg_get_entities(array('type' => 'object', 'subtype' => 'todosubm
 elgg_set_ignore_access($ia);
 
 $content = <<<HTML
-	<table id='stats-table'>
-		<tr class='odd'>
-			<td class='label'>$blog_label</td>
-			<td class='stat'>$blog_count</td>
-		</tr>
-		<tr class='even'>
-			<td class='label'>$photo_label</td>
-			<td class='stat'>$photo_count</td>
-		</tr>
-		<tr class='odd'>
-			<td class='label'>$videos_label</td>
-			<td class='stat'>$videos_count</td>
-		</tr>
-		<tr class='even'>
-			<td class='label'>$bookmark_label</td>
-			<td class='stat'>$bookmark_count</td>
-		</tr>
-		<tr class='odd'>
-			<td class='label'>$rubric_label</td>
-			<td class='stat'>$rubric_count</td>
-		</tr>
-		<tr class='even'>
-			<td class='label'>$group_label</td>
-			<td class='stat'>$group_count</td>
-		</tr>
-		<tr class='odd'>
-			<td class='label'>$todo_label</td>
-			<td class='stat'>$todo_count</td>
-		</tr>
+	<table class='elgg-table' id='stats-table'>
+		<tbody>
+			<tr class='odd'>
+				<td class='label'>$blog_label</td>
+				<td class='stat'>$blog_count</td>
+			</tr>
+			<tr class='even'>
+				<td class='label'>$photo_label</td>
+				<td class='stat'>$photo_count</td>
+			</tr>
+			<tr class='odd'>
+				<td class='label'>$videos_label</td>
+				<td class='stat'>$videos_count</td>
+			</tr>
+			<tr class='even'>
+				<td class='label'>$bookmark_label</td>
+				<td class='stat'>$bookmark_count</td>
+			</tr>
+			<tr class='odd'>
+				<td class='label'>$rubric_label</td>
+				<td class='stat'>$rubric_count</td>
+			</tr>
+			<tr class='even'>
+				<td class='label'>$group_label</td>
+				<td class='stat'>$group_count</td>
+			</tr>
+			<tr class='odd'>
+				<td class='label'>$todo_label</td>
+				<td class='stat'>$todo_count</td>
+			</tr>
+		</tbody>
 	</table>
 HTML;
 

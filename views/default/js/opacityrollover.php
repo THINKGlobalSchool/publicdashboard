@@ -1,6 +1,6 @@
 <?php
 /**
- * Public Dashboard CSS
+ * jQuery Opacityrollover Simplecache View
  * 
  * @package Public Dashboard
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
@@ -8,16 +8,6 @@
  * @copyright THINK Global School 2010
  * @link http://www.thinkglobalschool.com/
  */
-?>
-/**<style>**/
-
-.publicdashboard table#stats-table td.label {
-	text-shadow: 1px 1px 1px #AAAAAA;
-}
-
-.publicdashboard table#stats-table td.stat {
-	font-weight: bold;
-	color: #800518;
-}
-
-/**</style>**/
+$js_path = elgg_get_config('path');
+$js_path = "{$js_path}mod/publicdashboard/vendors/jquery.opacityrollover.js";
+include $js_path;
