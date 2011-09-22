@@ -11,7 +11,7 @@
 ?>
 /**<style>**/
 
-.publicdashboard table#stats-table td.label {
+table#stats-table td.label {
 	text-shadow: 1px 1px 1px #AAAAAA;
 }
 

@@ -79,7 +79,7 @@ function publicdashboard_index($hook, $type, $value, $params) {
 	
 	$body = elgg_view_layout('one_sidebar', $params);
 	echo elgg_view_page(null, $body);	
-	return true;
+	return $value;
 }
 
 /**
