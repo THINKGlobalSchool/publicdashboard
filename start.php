@@ -17,27 +17,26 @@ function publicdashboard_init() {
 	
 	// Register CSS
 	$pd_css = elgg_get_simplecache_url('css', 'publicdashboard/css');
+	elgg_register_simplecache_view('css/publicdashboard/css');
 	elgg_register_css('elgg.publicdashboard', $pd_css);
 	
 	$g_css = elgg_get_simplecache_url('css', 'publicdashboard/galleriffic');
+	elgg_register_simplecache_view('css/publicdashboard/galleriffic');
 	elgg_register_css('elgg.publicdashboard.galleriffic', $g_css);
 	
 	// Register JS
 	$pd_js = elgg_get_simplecache_url('js', 'publicdashboard/publicdashboard');
+	elgg_register_simplecache_view('js/flickrpublish/publicdashboard');
 	elgg_register_js('elgg.publicdashboard', $pd_js);
-	
-	// Register simplecache view galleriffic
-	elgg_register_simplecache_view('js/galleriffic');
-	
-	// Register simplecache url for opacityrollover
-	elgg_register_simplecache_view('js/opacityrollover');	
 	
 	// Register JS for galleriffic
 	$g_js = elgg_get_simplecache_url('js', 'galleriffic');
+	elgg_register_simplecache_view('js/galleriffic');
 	elgg_register_js('jquery.galleriffic', $g_js);
 	
 	// Register JS for opacity rollover
 	$or_js = elgg_get_simplecache_url('js', 'opacityrollover');
+	elgg_register_simplecache_view('js/opacityrollover');
 	elgg_register_js('jquery.opacityrollover', $or_js);
 	
 	// Hook to re-work site menu
