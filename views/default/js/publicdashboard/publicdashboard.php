@@ -70,4 +70,3 @@ elgg.publicdashboard.init = function() {
 }
 
 elgg.register_hook_handler('init', 'system', elgg.publicdashboard.init);
-//</script>

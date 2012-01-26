@@ -13,6 +13,8 @@
 $ia = elgg_get_ignore_access();
 elgg_set_ignore_access(true);
 
+$blog_count = $photo_count = $videos_count = $bookmark_count = $rubric_count = $group_count = $todo_count = 0;
+
 $blog_label = elgg_echo('publicdashboard:stats:blog');
 $blog_count = elgg_get_entities(array('type' => 'object', 'subtype' => 'blog', 'count' => true));
 
