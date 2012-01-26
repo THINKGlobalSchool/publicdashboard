@@ -13,7 +13,7 @@
     <label><?php echo elgg_echo('publicdashboard:introcontenttitletitle'); ?></label><br />
     <?php 
 	echo elgg_view('input/text', array(
-										'internalname' => 'params[introcontenttitle]', 
+										'name' => 'params[introcontenttitle]', 
 										'value' => $vars['entity']->introcontenttitle)
 										); 
 	?>
@@ -22,7 +22,7 @@
     <label><?php echo elgg_echo('publicdashboard:introcontenttitle'); ?></label><br />
     <?php 
 	echo elgg_view('input/plaintext', array(
-										'internalname' => 'params[introcontent]', 
+										'name' => 'params[introcontent]', 
 										'value' => $vars['entity']->introcontent)
 										); 
 	?>
@@ -31,7 +31,7 @@
     <label><?php echo elgg_echo('publicdashboard:statstitle'); ?></label><br />
     <?php 
 	echo elgg_view('input/text', array(
-										'internalname' => 'params[statstitle]', 
+										'name' => 'params[statstitle]', 
 										'value' => $vars['entity']->statstitle)
 										); 
 	?>
@@ -40,7 +40,7 @@
     <label><?php echo elgg_echo('publicdashboard:publictagthreshold'); ?></label><br />
     <?php 
 	echo elgg_view('input/text', array(
-										'internalname' => 'params[tagthreshold]', 
+										'name' => 'params[tagthreshold]', 
 										'value' => $vars['entity']->tagthreshold)
 										); 
 	?>
@@ -49,7 +49,7 @@
     <label><?php echo elgg_echo('publicdashboard:publictaglimit'); ?></label><br />
     <?php 
 	echo elgg_view('input/text', array(
-										'internalname' => 'params[taglimit]', 
+										'name' => 'params[taglimit]', 
 										'value' => $vars['entity']->taglimit)
 										); 
 	?>
