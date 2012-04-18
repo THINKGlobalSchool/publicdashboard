@@ -26,7 +26,7 @@ function publicdashboard_init() {
 	
 	// Register JS
 	$pd_js = elgg_get_simplecache_url('js', 'publicdashboard/publicdashboard');
-	elgg_register_simplecache_view('js/flickrpublish/publicdashboard');
+	elgg_register_simplecache_view('js/publicdashboard/publicdashboard');
 	elgg_register_js('elgg.publicdashboard', $pd_js);
 	
 	// Register JS for galleriffic
@@ -78,7 +78,7 @@ function publicdashboard_index($hook, $type, $value, $params) {
 	
 	$body = elgg_view_layout('one_sidebar', $params);
 	echo elgg_view_page(null, $body);	
-	return true;
+	return TRUE;
 }
 
 /**

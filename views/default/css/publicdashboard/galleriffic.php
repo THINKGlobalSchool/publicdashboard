@@ -28,9 +28,6 @@
 /* GALLERY CONTAINER */
 .gallery { background: #000; border: 1px solid #aaa; padding: 5px;}
 
-/* LOADING BOX */
-.loader { background: url(loader.gif) center center no-repeat #ddd; }
-
 /* GALLERY PANELS */
 .panel {
 	background: #000;
@@ -135,9 +132,6 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: url('loader.gif');
-	background-repeat: no-repeat;
-	background-position: center;
 	width: 550px;
 	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
 }
