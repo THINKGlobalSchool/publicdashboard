@@ -38,10 +38,6 @@ function publicdashboard_init() {
 	$or_js = elgg_get_simplecache_url('js', 'opacityrollover');
 	elgg_register_simplecache_view('js/opacityrollover');
 	elgg_register_js('jquery.opacityrollover', $or_js);
-	
-	// Hook to re-work site menu
-	elgg_register_plugin_hook_handler('prepare', 'menu:site', 'publicdashboard_site_menu_setup');
-	
 }
 
 /**
@@ -79,62 +75,4 @@ function publicdashboard_index($hook, $type, $value, $params) {
 	$body = elgg_view_layout('one_sidebar', $params);
 	echo elgg_view_page(null, $body);	
 	return TRUE;
-}
-
-/**
- * Tweak the site menu
- * 
- * @param unknown_type $hook
- * @param unknown_type $type
- * @param unknown_type $value
- * @param unknown_type $params
- * @return unknown
- */
-function publicdashboard_site_menu_setup($hook, $type, $value, $params) {	
-	if (elgg_in_context('publicdashboard')) {		
-		// Wipe out exising menu
-		$value = array();
-									
-		// Add Spot Home
-		$options = array(
-			'name' => 'spot_home',
-			'text' => elgg_echo('publicdashboard:menu:spothome'),
-			'href' =>  elgg_get_site_url(),
-			'priority' => 1,
-			//'context' => 'publicdashboard'
-		);
-		$value['default'][] = ElggMenuItem::factory($options);
-	
-		// Add Blog
-		$options = array(
-			'name' => 'blogs',
-			'text' => elgg_echo('publicdashboard:menu:blogs'),
-			'href' =>  elgg_get_site_url() . "blog",
-			'priority' => 2,
-			'context' => 'blog'
-		);
-		$value['default'][] = ElggMenuItem::factory($options);
-		
-		// Add Photos
-		$options = array(
-			'name' => 'photos',
-			'text' => elgg_echo('publicdashboard:menu:photos'),
-			'href' =>  elgg_get_site_url() . "photos",
-			'priority' => 3,
-			'context' => 'tidypics'
-		);
-		$value['default'][] = ElggMenuItem::factory($options);
-		
-		// Add Videos
-		$options = array(
-			'name' => 'blogs',
-			'text' => elgg_echo('publicdashboard:menu:videos'),
-			'href' =>  elgg_get_site_url() . "videos",
-			'priority' => 4,
-			'context' => 'simplekaltura'
-		);
-		$value['default'][] = ElggMenuItem::factory($options);
-
-	}
-	return $value;
 }
