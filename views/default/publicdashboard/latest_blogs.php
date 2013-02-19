@@ -11,6 +11,6 @@
 
 $header = elgg_echo('publicdashboard:latestblogs');
 
-$blogs = elgg_list_entities(array('type' => 'object', 'subtype' =>' blog', 'limit' => 5, 'full_view' => false, 'pagination' => FALSE));
+$blogs = elgg_list_entities(array('type' => 'object', 'subtype' => 'blog', 'limit' => 5, 'full_view' => false, 'pagination' => FALSE));
 
-echo elgg_view_module('main', $header, $blogs);
+echo elgg_view_module('aside', $header, $blogs);

@@ -13,7 +13,7 @@
  * @uses $vars['id']  - UL id
  */
 ?>
-<hr />
+<br />
 <div id='pdss'>
 	<div id="container">
 		<!-- Start Advanced Gallery Html Containers -->

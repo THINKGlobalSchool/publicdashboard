@@ -14,4 +14,4 @@ $header = elgg_echo('publicdashboard:latestphotos');
 $photos = elgg_get_entities(array('type' => 'object', 'subtype' => 'image', 'limit' => 30));
 $photos_content = elgg_view('publicdashboard/gallery', array('id' => 'photo-list', 'photos' => $photos));
 
-echo elgg_view_module('main', $header, $photos_content);
+echo elgg_view_module('aside', $header, $photos_content);
