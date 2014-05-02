@@ -12,6 +12,14 @@
 $header = elgg_echo('publicdashboard:latestphotos');
 
 $photos = elgg_get_entities(array('type' => 'object', 'subtype' => 'image', 'limit' => 30));
-$photos_content = elgg_view('publicdashboard/gallery', array('id' => 'photo-list', 'photos' => $photos));
+
+if (!count($photos)) {
+	$photos_content = elgg_echo('publicdashboard:nophotos');
+} else {
+	elgg_load_js('jquery.galleriffic');
+	elgg_load_js('jquery.opacityrollover');
+	elgg_load_js('elgg.publicdashboard');
+	$photos_content = elgg_view('publicdashboard/gallery', array('id' => 'photo-list', 'photos' => $photos));
+}
 
 echo elgg_view_module('aside', $header, $photos_content);

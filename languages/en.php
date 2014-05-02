@@ -20,12 +20,16 @@ $english = array(
 	'publicdashboard:introcontenttitle' => 'Introduction Content',
 	'publicdashboard:publictagthreshold' => 'Tag Cloud Threshold',
 	'publicdashboard:publictaglimit' => 'Tag Cloud Limit',
+	'publicdashboard:noblogs' => 'No blogs',
+	'publicdashboard:nophotos' => 'No photos',
+	'publicdashboard:novideos' => 'No videos',
 	
 	// Site menu
 	'publicdashboard:menu:spothome' => 'Spot Home',
 	'publicdashboard:menu:blogs' => 'Blogs',
 	'publicdashboard:menu:photos' => 'Photos',
 	'publicdashboard:menu:videos' => 'Videos',
+
 	
 	// Stats
 	'publicdashboard:stats:blog' => 'Blog Posts',

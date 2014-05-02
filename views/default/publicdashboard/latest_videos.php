@@ -16,4 +16,8 @@ $header = elgg_echo('publicdashboard:latestvideos');
 
 $videos = elgg_list_entities(array('type' => 'object', 'subtype' => 'simplekaltura_video', 'limit' => 5, 'full_view' => false, 'pagination' => FALSE));
 
+if (!$videos) {
+	$videos = elgg_echo('publicdashboard:novideos');
+}
+
 echo elgg_view_module('aside', $header, $videos);

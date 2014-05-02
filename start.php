@@ -59,11 +59,6 @@ function publicdashboard_index($hook, $type, $value, $params) {
 	elgg_load_css('elgg.publicdashboard');
 	elgg_load_css('elgg.publicdashboard.galleriffic');
 
-	// Load JS
-	elgg_load_js('elgg.publicdashboard');
-	elgg_load_js('jquery.galleriffic');
-	elgg_load_js('jquery.opacityrollover');
-
 	$params['content'] = elgg_view('publicdashboard/latest_blogs');
 	$params['content'] .= elgg_view('publicdashboard/latest_photos');
 	$params['content'] .= elgg_view('publicdashboard/latest_videos');

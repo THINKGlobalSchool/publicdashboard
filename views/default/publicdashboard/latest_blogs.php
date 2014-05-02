@@ -13,4 +13,8 @@ $header = elgg_echo('publicdashboard:latestblogs');
 
 $blogs = elgg_list_entities(array('type' => 'object', 'subtype' => 'blog', 'limit' => 5, 'full_view' => false, 'pagination' => FALSE));
 
+if (!$blogs) {
+	$blogs = elgg_echo('publicdashboard:noblogs');
+}
+
 echo elgg_view_module('aside', $header, $blogs);

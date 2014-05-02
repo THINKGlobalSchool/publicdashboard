@@ -31,7 +31,7 @@ $tags_content = elgg_view("output/tagcloud", array('value' => $tags));
 if ($tags_content) {
 	$tags_header = elgg_echo('publicdashboard:tagcloud');
 	$context = elgg_get_context();
-	$tags = elgg_view_module('aside', $tags_header, $tags_content);
+	$tags_content = elgg_view_module('aside', $tags_header, $tags_content);
 }
 
 // Display content in modules for consistency 
@@ -42,7 +42,7 @@ $content = <<<HTML
 	<div class='publicdashboard'>
 		$intro
 		$stats
-		$tags
+		$tags_content
 	</div>
 HTML;
 
