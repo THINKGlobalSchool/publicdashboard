@@ -13,7 +13,7 @@ $header = elgg_echo('publicdashboard:latestphotos');
 
 $photos = elgg_get_entities(array('type' => 'object', 'subtype' => 'image', 'limit' => 30));
 
-if (!count($photos)) {
+if (!$photos) {
 	$photos_content = elgg_echo('publicdashboard:nophotos');
 } else {
 	elgg_load_js('jquery.galleriffic');
